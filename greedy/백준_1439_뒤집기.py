@@ -1,9 +1,9 @@
 from sys import stdin
 input = stdin.readline
 
-s = input()
-group = []
+s = input().rstrip()
 
+group = [1]
 current = s[0]
 for ss in s[1:]:
     if ss != current:
