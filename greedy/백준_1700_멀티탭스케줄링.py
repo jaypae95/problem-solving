@@ -16,6 +16,8 @@ for ii, ss in enumerate(schedule):
         multitap.append(ss)
         current_on[ss] = True
         continue
+    
+    # 바꿔줘야 할 때
     maximum_count = -1
     to_switch = 0
     for mm in range(multitap_num):
