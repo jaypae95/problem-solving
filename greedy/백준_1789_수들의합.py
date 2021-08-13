@@ -4,13 +4,13 @@ input = stdin.readline
 target = int(input())
 
 answer = 0
-current = 0
-prev = 0
+count = 0
+
 while answer != target:
-    current += 1
-    answer += current
+    count += 1
+    answer += count
     if answer > target:
-        current -= 1
+        count -= 1
         break
 
 print(current)
