@@ -2,6 +2,8 @@ from collections import deque
 LEN = 5
 dy = [0, 1, 0, -1]
 dx = [1, 0, -1, 0]
+
+
 def bfs(i, j, place):
     visited = set()
     q = deque()
@@ -28,8 +30,7 @@ def bfs(i, j, place):
             visited.add((ny, nx))
             
     return True
-                
-    
+
 
 def solution(places):
     answer = []

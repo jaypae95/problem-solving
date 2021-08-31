@@ -2,11 +2,13 @@ from sys import stdin, setrecursionlimit
 input = stdin.readline
 setrecursionlimit(10**6)
 
+
 def get_parent(parent, node):
     if parent[node] == node:
         return node
     parent[node] = get_parent(parent, parent[node])
     return parent[node]
+
 
 def union_parent(parent, a_node, b_node):
     a_parent = get_parent(parent, a_node)

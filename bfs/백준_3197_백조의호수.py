@@ -5,10 +5,11 @@ input = stdin.readline
 dy = (-1, 0, 1, 0)
 dx = (0, -1, 0, 1)
 
+
 def find_swan(lake, visited, queue):
     next_queue = deque()
     while queue:
-        y, x  = queue.popleft()
+        y, x = queue.popleft()
         if y == swan[1][0] and x == swan[1][1]:
             return True, None
         

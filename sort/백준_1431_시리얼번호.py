@@ -1,6 +1,7 @@
 from sys import stdin
 input = stdin.readline
 
+
 def sum_of_digits(x):
     count = 0
     for ii in x:
@@ -8,6 +9,7 @@ def sum_of_digits(x):
             count += int(ii)
 
     return count
+
 
 n = int(input())
 serial = []

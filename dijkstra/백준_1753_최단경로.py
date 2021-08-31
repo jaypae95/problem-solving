@@ -3,7 +3,8 @@ import heapq
 input = stdin.readline
 INF = 999999999
 
-def  dijkstra(start, verticles, route):
+
+def dijkstra(start, verticles, route):
     distance = [INF for _ in range(verticles + 1)]
     distance[start] = 0
     pq = []

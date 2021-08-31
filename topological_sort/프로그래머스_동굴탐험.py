@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def bfs(room_tmp, n):
     room = [[] for _ in range(n)]
     indegree = [0 for _ in range(n)]

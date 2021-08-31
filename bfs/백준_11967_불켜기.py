@@ -5,6 +5,7 @@ input = stdin.readline
 dy = [1, 0, -1, 0]
 dx = [0, 1, 0, -1]
 
+
 def turn_on_light(n, switch_turned, room):
     queue = deque()
     visited = set()
@@ -12,8 +13,8 @@ def turn_on_light(n, switch_turned, room):
     count = 0
 
     room[1][1] = True
-    queue.append((1,1))
-    visited.add((1,1))
+    queue.append((1, 1))
+    visited.add((1, 1))
 
     while queue:
         x, y = queue.popleft()
@@ -44,9 +45,9 @@ switch_info = dict()
 
 for _ in range(m):
     x, y, a, b = map(int, input().split())
-    if (x,y) not in switch_info:
-        switch_info[(x,y)] = []
-    switch_info[(x,y)].append((a,b))
+    if (x, y) not in switch_info:
+        switch_info[(x, y)] = []
+    switch_info[(x, y)].append((a, b))
 
 switch_turned = set()
 total_count = 1

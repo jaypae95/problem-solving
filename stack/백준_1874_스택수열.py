@@ -19,5 +19,3 @@ for ii in range(1, n+1):
         target_index += 1
 
 print(*result, sep='\n') if not current else print('NO')
-
-

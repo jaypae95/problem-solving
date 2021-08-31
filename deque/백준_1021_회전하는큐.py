@@ -16,6 +16,3 @@ for ww in want_to_pop:
     q.popleft()
 
 print(count)
-
-
-

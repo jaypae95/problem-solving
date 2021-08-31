@@ -6,7 +6,7 @@ multitap_num, schedule_num = map(int, input().split())
 result = 0
 schedule = list(map(int, input().split()))
 multitap = []
-current_on = [False for _ in range(schedule_num+1)] #schedule_num 이하의 자연수만 입력됨
+current_on = [False for _ in range(schedule_num+1)]  # schedule_num 이하의 자연수만 입력됨
 for ii, ss in enumerate(schedule):
     # 이미 꽂혀 있을 때
     if current_on[ss]:

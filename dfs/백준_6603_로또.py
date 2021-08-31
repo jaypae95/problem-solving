@@ -1,7 +1,7 @@
 from sys import stdin
 input = stdin.readline
-
 lotto = []
+
 
 def dfs(count, start):
     if count == 6:
@@ -11,6 +11,7 @@ def dfs(count, start):
         lotto.append(current[ii])
         dfs(count+1, ii+1)
         lotto.pop()
+
 
 while True:
     current = input().split()

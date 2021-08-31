@@ -1,5 +1,5 @@
-#Pypy3 제출
-#이중 while 없이 불을 먼저 다 번지게 하면서 count 저장해놓고 그 값 비교하면서 상근이를 움직이는 것이 더 좋을 것 같다.
+# Pypy3 제출
+# 이중 while 없이 불을 먼저 다 번지게 하면서 count 저장해놓고 그 값 비교하면서 상근이를 움직이는 것이 더 좋을 것 같다.
 
 from sys import stdin
 from collections import deque

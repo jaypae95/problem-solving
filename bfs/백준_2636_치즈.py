@@ -6,6 +6,7 @@ dy = (-1, 0, 1, 0)
 dx = (0, -1, 0, 1)
 row, column = map(int, input().split())
 
+
 def bfs(graph):
     visited = [[False for _ in range(column)] for _ in range(row)]
     queue = deque()

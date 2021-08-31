@@ -11,6 +11,7 @@ for _ in range(row):
     my_map.append(list(map(int, input().split())))
 cache = [[-1 for _ in range(column)] for _ in range(row)]
 
+
 def dfs(y, x):
     if y == row-1 and x == column-1:
         return 1
@@ -28,5 +29,6 @@ def dfs(y, x):
         cache[y][x] += dfs(ny, nx)
     
     return cache[y][x]
+
 
 print(dfs(0, 0))
