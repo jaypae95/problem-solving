@@ -25,11 +25,10 @@ def turn_on_light(n, switch_turned, room):
                     count += 1
             switch_turned.add((x, y))
             
-        
         for ii in range(4):
             ny = y + dy[ii]
             nx = x + dx[ii]
-            if not 0<ny<=n or not 0<nx<=n:
+            if not 0 < ny <= n or not 0 < nx <= n:
                 continue
             if (nx, ny) in visited:
                 continue
