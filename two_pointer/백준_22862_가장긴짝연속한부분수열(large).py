@@ -9,24 +9,24 @@ odd_num = 1 if seq[p1] & 1 == 1 else 0
 max_length = 0
 
 while p1 < n and p2 < n:
-    # 홀수가 K개가 될 때 까지 p2를 늘림
-    while odd_num < k and p2 < n-1:
-        p2 += 1
-        if seq[p2] & 1 == 1:
+    # 홀수가 K개가 넘을 때까지 p2를 늘림
+    while odd_num <= k:
+        try:
+            p2 += 1
+            if seq[p2] & 1 == 1:
+                odd_num += 1
+        except IndexError:
+            # odd_num > k 가 됐을 때와 똑같은 상황으로 만들어줌
             odd_num += 1
-    # 홀수가 K개가 되면 짝수의 개수를 구함
-    current_even = p2 - p1 - odd_num + 1
-
-    # p2 오른쪽에 연속된 짝수의 개수를 구한 후 더해줌
-    for ii in range(p2 + 1, n):
-        if seq[ii] & 1 != 0:
             break
-        current_even += 1
 
-    # 가장 긴 값을 구해줌
-    max_length = max(max_length, current_even)
+    # 홀수가 K개를 초과했으므로 한 칸 왼쪽으로 옮겨줌 (넘기 바로 직전까지)
+    p2 -= 1
+    odd_num -= 1
 
-    # p1을 오른쪽으로 옮겨주기 전에 현재 값이 홀수라면 홀수의 개수에서 빼줌
+    max_length = max(max_length, p2 - p1 + 1 - odd_num)
+
+    # p1을 오른쪽으로 옮겨주기 전에 현재 p1 값이 홀수라면 개수에서 빼줌
     if seq[p1] & 1 == 1:
         odd_num -= 1
     p1 += 1
