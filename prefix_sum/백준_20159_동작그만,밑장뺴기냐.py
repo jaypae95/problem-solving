@@ -17,16 +17,14 @@ for ii in range(0, n):
     else:
         card_sum[ODD][ii//2 + 1] = card_sum[ODD][ii//2] + cards[ii] 
 
-result = card_sum[ODD][n//2]
-dp = [0 for _ in range(n+1)]
-
+result = 0
 for ii in range(1, n+1):
     index = ii//2 + 1
     if ii % 2 == 0:
-        dp[ii] = card_sum[ODD][index - 1] + (card_sum[EVEN][n//2 - 1] - card_sum[EVEN][index - 2])
+        current = card_sum[ODD][index - 1] + (card_sum[EVEN][n//2 - 1] - card_sum[EVEN][index - 2])
     else:
-        dp[ii] = card_sum[ODD][index - 1] + (card_sum[EVEN][n//2 - 1] - card_sum[EVEN][index - 1]) + cards[n - 1]
+        current = card_sum[ODD][index - 1] + (card_sum[EVEN][n//2 - 1] - card_sum[EVEN][index - 1]) + cards[n - 1]
     
-    result = max(result, dp[ii])
+    result = max(result, current)
 
 print(result)
